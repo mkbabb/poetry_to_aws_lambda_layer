@@ -18,7 +18,7 @@ resource "aws_lambda_layer_version" "layer" {
   layer_name = var.layer_name
 
   compatible_runtimes = ["python${var.python_version}"]
-  depends_on          = [null_resource.zip_lambda_layer]
+  depends_on          = [null_resource.zip_layer]
 }
 
 
