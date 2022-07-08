@@ -3,10 +3,12 @@ DIST="${1:-./dist}"
 
 mkdir -p $DIST/python
 
+cp $2 $DIST/python
+
 # Export the packages from poetry; install locally.
 # No devevelopment dependencies.
 poetry export -f requirements.txt --without-hashes >$DIST/requirements.txt
 python3 -m pip install -r $DIST/requirements.txt -t $DIST/python
 rm $DIST/requirements.txt
 
-zip -jr $DIST/layer.zip $DIST/python $2
+zip -r $DIST/layer.zip $DIST/python
