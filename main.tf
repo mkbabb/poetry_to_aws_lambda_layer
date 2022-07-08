@@ -9,7 +9,7 @@ provider "aws" {
 
 resource "null_resource" "zip_layer" {
   provisioner "local-exec" {
-    command = "${path.module}/build.sh ${var.dist_path}"
+    command = "${path.module}/build.sh ${var.dist_path} ${var.extra_paths}"
   }
 }
 
