@@ -7,7 +7,7 @@ variable "dist_path" {
 }
 
 variable "extra_paths" {
-    default = ""
+  default = " "
 }
 
 variable "python_version" {
