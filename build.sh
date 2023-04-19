@@ -1,10 +1,13 @@
 #!/bin/zsh
 
+# Default to Python 3.9
 PYTHON_VERSION="${1:-3.9}"
+# Default to ./dist
 DIST="${2:-./dist}"
 
 mkdir $DIST/python
 
+# Copy the "extra_paths" into the dist folder.
 cp $3 $DIST/python
 
 # Export the packages from poetry; install locally.
