@@ -11,5 +11,5 @@ variable "extra_paths" {
 }
 
 variable "python_version" {
-  default = "3.9"
+  default = "3.10"
 }

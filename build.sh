@@ -1,10 +1,11 @@
 #!/bin/zsh
-DIST="${1:-./dist}"
 
-PYTHON_VERSION=3.9
+PYTHON_VERSION="${1:-3.9}"
+DIST="${2:-./dist}"
+
 mkdir $DIST/python
 
-cp $2 $DIST/python
+cp $3 $DIST/python
 
 # Export the packages from poetry; install locally.
 # No devevelopment dependencies.
