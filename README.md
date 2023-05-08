@@ -8,9 +8,11 @@ supports `manylinux1_x86_64` wheels.
 ```hcl
 module "make_layer" {
     source         = "git@github.com:mkbabb/ poetry_to_aws_lambda_layer.git"
+
+    name           = "tmp_layer"   
     dist_path      = "./dist"
     extra_paths    = "./src/.."
-    python_version = "3.8"
+    python_version = "3.10"
 }
 ```
 
