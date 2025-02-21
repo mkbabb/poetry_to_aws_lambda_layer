@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-# Default to Python 3.9
-PYTHON_VERSION="${1:-3.9}"
+# Default to Python 3.12
+PYTHON_VERSION="${1:-3.12}"
 # Default to ./dist
 DIST="${2:-./dist}"
 
