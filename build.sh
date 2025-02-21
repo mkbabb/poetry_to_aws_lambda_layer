@@ -15,7 +15,7 @@ cp $3 $DIST/python
 
 # No devevelopment dependencies.
 poetry export -f requirements.txt --without-hashes >$DIST/requirements.txt
-python3 -m pip install --platform=manylinux1_x86_64 --no-deps --python-version $PYTHON_VERSION -r $DIST/requirements.txt -t $DIST/python
+poetry run python3 -m pip install --platform=manylinux1_x86_64 --no-deps --python-version $PYTHON_VERSION -r $DIST/requirements.txt -t $DIST/python
 
 cd $DIST
 zip -r layer.zip python/
